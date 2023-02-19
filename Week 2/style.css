@@ -1,0 +1,41 @@
+.part1 h2 {
+    color: red;
+}
+
+.part1 p {
+    background-color: black;
+    color: white;
+    display: inline;
+}
+
+.part2 h2 {
+    color: green;
+}
+
+.part2 p {
+    background-color: #141414;
+    color: #81e081;
+    display: inline;
+}
+
+.part3 p {
+    color: green;
+}
+
+.part4 > p {
+    color: green;
+}
+
+.csym019 {
+    display: block;
+    width: 50%;
+    background-color: #81e081;
+    float: left;
+}
+
+.csym015 {
+    display: block;
+    width: 50%;
+    background-color: #cfe490;
+    float: right;
+}
