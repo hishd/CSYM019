@@ -23,9 +23,8 @@
 }
 
 .footer-section {
-    grid-row: 4;
-    grid-column: 1;
     color: white;
     background: green;
+    display: block;
 }
 
