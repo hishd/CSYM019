@@ -1,9 +1,14 @@
+.wrapper-head {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+}
+
 .header-section {
     color: white;
     background-color: blue;
     padding-left: 2em;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 1em;
     display: block;
 }
 
