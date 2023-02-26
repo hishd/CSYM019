@@ -1,0 +1,31 @@
+.header-section {
+    color: white;
+    background-color: blue;
+    padding-left: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: block;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 20fr 80fr;
+}
+
+.main-container >.section-one {
+    background-color: yellow;
+}
+
+.main-container >.section-two {
+    background-color: darkblue;
+    color: white;
+    padding-top: 1em;
+}
+
+.footer-section {
+    grid-row: 4;
+    grid-column: 1;
+    color: white;
+    background: green;
+}
+
