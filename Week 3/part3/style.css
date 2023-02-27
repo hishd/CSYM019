@@ -1,0 +1,43 @@
+.header-section {
+    color: white;
+    background-color: blue;
+    padding-left: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: block;
+}
+
+.nav-container {
+    background-color: yellow;
+    display: grid;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    text-align: center;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+}
+
+.main-container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+}
+
+.main-container >.section-one {
+    background-color: darkblue;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: white;
+}
+
+.main-container >.section-two {
+    background-color: greenyellow;
+    padding-bottom: 2em;
+}
+
+.footer-section {
+    color: white;
+    background: green;
+    display: block;
+}
+
