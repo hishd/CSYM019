@@ -1,14 +1,22 @@
+.wrapper-head {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+}
+
 .header-section {
     color: white;
     background-color: blue;
-    padding: 2em 0 2em 2em;
+    padding-left: 2em;
+    padding-top: 1em;
     display: block;
 }
 
 .nav-container {
     background-color: yellow;
     display: grid;
-    padding: 2em 0 1em 0;
+    padding-top: 2em;
+    padding-bottom: 1em;
     text-align: center;
     grid-auto-columns: 1fr;
     grid-auto-flow: column;
@@ -16,12 +24,14 @@
 
 .main-container {
     display: grid;
-    grid-template-columns: 80fr 20fr;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
 }
 
 .main-container >.section-one {
     background-color: darkblue;
-    padding: 1em 0 1em 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
     color: white;
 }
 
@@ -33,5 +43,6 @@
 .footer-section {
     color: white;
     background: green;
+    display: block;
 }
 
