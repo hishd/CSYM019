@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "animal": "dog",
+        "number": 100,
+        "location": "New York",
+        "date": "2019-01-01",
+        "time": "12:00:00",
+        "observer": {
+            "name": "Hishara",
+            "email": "hishara@gmail.com"
+        },
+        "observations": "This is a dog"
+    }
+]
