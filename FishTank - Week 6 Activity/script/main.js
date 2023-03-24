@@ -1,7 +1,7 @@
 function runOnLoad() {
-  const button = document.getElementById("circle");
-  let offsetX = button.offsetLeft;
-  let offsetY = button.offsetTop;
+  const fish = document.getElementById("circle");
+  let offsetX = fish.offsetLeft;
+  let offsetY = fish.offsetTop;
 
   let handle = null;
 
@@ -11,18 +11,18 @@ function runOnLoad() {
       return;
     }
     offsetX = offsetX - 5;
-    button.style.left = `${offsetX}px`;
-    button.style.backgroundImage = "url(fish-left.png)";
+    fish.style.left = `${offsetX}px`;
+    fish.style.backgroundImage = "url(img/fish-left.png)";
   }
 
   function moveRight() {
-    if (offsetX >= window.innerWidth - button.offsetWidth) {
+    if (offsetX >= window.innerWidth - fish.offsetWidth) {
       clearInterval(handle);
       return;
     }
     offsetX = offsetX + 5;
-    button.style.left = `${offsetX}px`;
-    button.style.backgroundImage = "url(fish-right.png)";
+    fish.style.left = `${offsetX}px`;
+    fish.style.backgroundImage = "url(img/fish-right.png)";
   }
 
   function moveUp() {
@@ -31,41 +31,53 @@ function runOnLoad() {
       return;
     }
     offsetY = offsetY - 5;
-    button.style.top = `${offsetY}px`;
-    button.style.backgroundImage = "url(fish-up.png)";
+    fish.style.top = `${offsetY}px`;
+    fish.style.backgroundImage = "url(img/fish-up.png)";
   }
 
   function moveDown() {
-    if (offsetY >= window.innerHeight - button.offsetHeight) {
+    if (offsetY >= window.innerHeight - fish.offsetHeight) {
       clearInterval(handle);
       return;
     }
     offsetY = offsetY + 5;
-    button.style.top = `${offsetY}px`;
-    button.style.backgroundImage = "url(fish-down.png)";
+    fish.style.top = `${offsetY}px`;
+    fish.style.backgroundImage = "url(img/fish-down.png)";
   }
+
+  let currentKey = null;
 
   document.onkeydown = (event) => {
     console.log(event.key);
     switch (event.key) {
       case "ArrowLeft":
+        if (currentKey === "ArrowLeft") return;
         clearInterval(handle);
         handle = setInterval(moveLeft, 20);
+        currentKey = "ArrowLeft";
         break;
       case "ArrowRight":
+        if (currentKey === "ArrowRight") return;
         clearInterval(handle);
         handle = setInterval(moveRight, 20);
+        currentKey = "ArrowRight";
         break;
       case "ArrowUp":
+        if (currentKey === "ArrowUp") return;
         clearInterval(handle);
         handle = setInterval(moveUp, 20);
+        currentKey = "ArrowUp";
         break;
       case "ArrowDown":
+        if (currentKey === "ArrowDown") return;
         clearInterval(handle);
         handle = setInterval(moveDown, 20);
+        currentKey = "ArrowDown";
         break;
       case " ":
+        if (currentKey === " ") return;
         clearInterval(handle);
+        currentKey = " ";
         break;
     }
   };
